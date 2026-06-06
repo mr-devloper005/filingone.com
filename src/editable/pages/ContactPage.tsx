@@ -10,20 +10,20 @@ import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
 function getTone(kind: ReturnType<typeof getProductKind>) {
   if (kind === 'directory') {
     return {
-      shell: 'bg-[#f8fbff] text-slate-950',
-      panel: 'border border-slate-200 bg-white',
-      soft: 'border border-slate-200 bg-slate-50',
-      muted: 'text-slate-600',
-      action: 'bg-slate-950 text-white hover:bg-slate-800',
+      shell: 'bg-[var(--editable-page-bg,#f7f2ea)] text-[var(--editable-page-text,#121a2a)]',
+      panel: 'border border-[#1a32631f] bg-white',
+      soft: 'border border-[#1a32631f] bg-[var(--slot4-gray)]',
+      muted: 'text-[var(--slot4-muted-text)]',
+      action: 'bg-[var(--slot4-dark-bg)] text-white hover:-translate-y-0.5',
     }
   }
   if (kind === 'editorial') {
     return {
-      shell: 'bg-[#fbf6ee] text-[#241711]',
-      panel: 'border border-[#dcc8b7] bg-[#fffdfa]',
-      soft: 'border border-[#e6d6c8] bg-[#fff4e8]',
-      muted: 'text-[#6e5547]',
-      action: 'bg-[#241711] text-[#fff1e2] hover:bg-[#3a241b]',
+      shell: 'bg-[var(--editable-page-bg,#f7f2ea)] text-[var(--editable-page-text,#121a2a)]',
+      panel: 'border border-[#1a32631f] bg-white',
+      soft: 'border border-[#1a32631f] bg-[var(--slot4-gray)]',
+      muted: 'text-[var(--slot4-muted-text)]',
+      action: 'bg-[var(--slot4-dark-bg)] text-white hover:-translate-y-0.5',
     }
   }
   if (kind === 'visual') {
@@ -36,11 +36,11 @@ function getTone(kind: ReturnType<typeof getProductKind>) {
     }
   }
   return {
-    shell: 'bg-[#f7f1ea] text-[#261811]',
-    panel: 'border border-[#ddcdbd] bg-[#fffaf4]',
-    soft: 'border border-[#e8dbce] bg-[#f3e8db]',
-    muted: 'text-[#71574a]',
-    action: 'bg-[#5b2b3b] text-[#fff0f5] hover:bg-[#74364b]',
+    shell: 'bg-[var(--editable-page-bg,#f7f2ea)] text-[var(--editable-page-text,#121a2a)]',
+    panel: 'border border-[#1a32631f] bg-white',
+    soft: 'border border-[#1a32631f] bg-[var(--slot4-gray)]',
+    muted: 'text-[var(--slot4-muted-text)]',
+    action: 'bg-[var(--slot4-dark-bg)] text-white hover:-translate-y-0.5',
   }
 }
 
@@ -76,11 +76,11 @@ export default function ContactPage() {
 
   return (
     <EditableSiteShell className={tone.shell}>
-      <main className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-[var(--editable-container)] px-4 py-14 sm:px-6 lg:px-8">
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] opacity-70">{pagesContent.contact.eyebrow}</p>
-            <h1 className="mt-4 text-5xl font-semibold tracking-[-0.05em]">{pagesContent.contact.title}</h1>
+            <p className="text-[11px] font-black uppercase tracking-[0.28em] text-[var(--slot4-accent)]">{pagesContent.contact.eyebrow}</p>
+            <h1 className="mt-4 max-w-3xl text-5xl font-black leading-[0.94] tracking-[-0.08em] sm:text-6xl">{pagesContent.contact.title}</h1>
             <p className={`mt-5 max-w-2xl text-sm leading-8 ${tone.muted}`}>{pagesContent.contact.description}</p>
             <div className="mt-8 space-y-4">
               {lanes.map((lane) => (
@@ -94,7 +94,7 @@ export default function ContactPage() {
           </div>
 
           <div className={`rounded-[2rem] p-7 ${tone.panel}`}>
-            <h2 className="text-2xl font-semibold">{pagesContent.contact.formTitle}</h2>
+            <h2 className="text-2xl font-black tracking-[-0.04em]">{pagesContent.contact.formTitle}</h2>
             <EditableContactLeadForm />
           </div>
         </section>
