@@ -15,6 +15,7 @@ body {
   background-color: var(--slot4-page-bg) !important;
   color: var(--slot4-page-text) !important;
   background-image: var(--slot4-body-gradient) !important;
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -35,10 +36,54 @@ body {
   background: color-mix(in oklab, var(--slot4-accent) 62%, transparent);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.36), transparent 22%),
+    radial-gradient(circle at 50% 0%, rgba(255, 197, 112, 0.14), transparent 30%);
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
 .article-content h2 {
   color: var(--slot4-accent);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.65rem;
+  line-height: 1.15;
 }
 
 .article-content a {
   color: var(--slot4-accent-fill);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.article-content p + p {
+  margin-top: 1rem;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 1.25rem;
+}
+
+.article-content li + li {
+  margin-top: 0.45rem;
+}
+
+.article-content img {
+  border-radius: 1.35rem;
+  margin-block: 1.5rem;
 }
