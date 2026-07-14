@@ -7,18 +7,18 @@ import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
 const highlights = [
   {
     icon: FileText,
-    title: 'Document-led browsing',
-    description: 'PDFs and other useful reading pieces stay easy to scan, open, and revisit from one clean archive flow.',
+    title: 'Useful from the first glance',
+    description: 'Clear titles and concise context help you understand what a document offers before you open it.',
   },
   {
     icon: Search,
-    title: 'Search that stays practical',
-    description: 'Visitors can move from the homepage into search and archive filters without losing context or rhythm.',
+    title: 'Built for discovery',
+    description: 'Search and browse tools make it easier to reach the right guide, report, or reference without the detour.',
   },
   {
     icon: Sparkles,
-    title: 'Editorial presentation',
-    description: 'Cards, sections, and detail pages use mixed layouts so the site feels designed rather than templated.',
+    title: 'Focused by design',
+    description: 'A calm, readable experience keeps attention on the information—not on unnecessary interface noise.',
   },
 ]
 
@@ -34,9 +34,9 @@ export default function AboutPage() {
 
             <div className="mt-8 grid gap-4 rounded-[2rem] border border-[#1a32631f] bg-[var(--slot4-gray)] p-5 sm:grid-cols-3">
               {[
-                ['PDF-first', 'Featured documents lead the front page.'],
-                ['Premium feel', 'Classic spacing with a quieter visual rhythm.'],
-                ['Safe fallbacks', 'Pages stay composed even with missing fields.'],
+                ['Discover', 'Find practical documents without digging through clutter.'],
+                ['Understand', 'See useful context before choosing what to open.'],
+                ['Return', 'Come back to a library that stays clear and easy to browse.'],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-[1.4rem] bg-white p-4 shadow-sm">
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--slot4-accent)]">{label}</p>
@@ -51,20 +51,20 @@ export default function AboutPage() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/pdf" className="inline-flex items-center gap-2 rounded-full bg-[var(--slot4-dark-bg)] px-5 py-3 text-sm font-black text-white transition hover:-translate-y-0.5">
-                Open PDF library <ArrowRight className="h-4 w-4" />
+                Browse documents <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/search" className="inline-flex items-center gap-2 rounded-full border border-[#1a32631f] bg-white px-5 py-3 text-sm font-black transition hover:-translate-y-0.5">
-                Search content
+                Search FilingOne
               </Link>
             </div>
           </article>
 
           <aside className="space-y-4">
             <div className="rounded-[2.4rem] border border-[#1a32631f] bg-[var(--slot4-dark-bg)] p-7 text-white shadow-[0_24px_70px_rgba(11,15,22,0.18)]">
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/60">What this site does</p>
-              <h2 className="mt-4 text-3xl font-black leading-[0.98] tracking-[-0.06em]">A polished home for documents and useful reading.</h2>
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/60">Why FilingOne</p>
+              <h2 className="mt-4 text-3xl font-black leading-[0.98] tracking-[-0.06em]">One focused library for information worth keeping.</h2>
               <p className="mt-4 text-sm leading-7 text-white/72">
-                The experience is designed to feel calm, readable, and premium from the top nav down to the archive pages.
+                Documents are easier to use when the path to them is simple. FilingOne keeps discovery clear from the first search to the final page.
               </p>
             </div>
 
@@ -84,9 +84,9 @@ export default function AboutPage() {
             })}
 
             <div className="rounded-[2rem] border border-[#1a32631f] bg-[var(--slot4-gray)] p-6">
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-[var(--slot4-accent)]">Site direction</p>
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-[var(--slot4-accent)]">Our purpose</p>
               <p className="mt-4 text-sm leading-7 text-[var(--slot4-muted-text)]">
-                Filingone is built to make reading feel effortless and to make PDF browsing feel intentional.
+                Make trustworthy, useful documents simpler to discover and easier to explore.
               </p>
               <p className="mt-4 text-sm font-black text-[var(--slot4-page-text)]">{SITE_CONFIG.name}</p>
             </div>

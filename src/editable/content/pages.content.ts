@@ -49,13 +49,13 @@ export const pagesContent = {
     taskSection: { heading: 'Latest {label}', descriptionSuffix: 'Browse the newest posts in this section.' },
   },
   about: {
-    badge: 'About the library',
-    title: 'A calm place for documents, reading, and useful references.',
-    description: `${slot4BrandConfig.siteName} is built for people who want a polished way to browse PDFs, read longer pieces, and keep track of useful pages.`,
+    badge: 'About FilingOne',
+    title: 'The useful document should never be the hard one to find.',
+    description: `${slot4BrandConfig.siteName} brings practical documents, guides, and reference material into one focused place—so you can spend less time searching and more time using what you find.`,
     paragraphs: [
-      'Instead of splitting useful material into disconnected surfaces, the library keeps related pages close together with clear hierarchy and a steady rhythm.',
-      'The front page leads with document covers and featured reads, while the archive stays practical enough to move through quickly on desktop and mobile.',
-      'Every section uses safe fallbacks for images, summaries, and category fields so the layout stays composed even when content is incomplete.',
+      'We built FilingOne around a simple idea: important information is more valuable when it is easy to discover, understand, and return to. Every document is presented with the context you need to decide what is worth opening.',
+      'Browse featured resources, explore the full document collection, or search by the words that matter to you. Clear categories and concise summaries keep the experience quick on desktop and mobile.',
+      'Whether you are researching a topic, comparing guidance, or saving a useful reference for later, FilingOne helps you move from question to document without the usual clutter.',
     ],
     values: [
       {
